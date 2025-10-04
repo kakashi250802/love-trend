@@ -1,0 +1,47 @@
+html,
+body {
+    background: #000 !important;
+    color-scheme: dark;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+body {
+    background: #000;
+    background: radial-gradient(circle, #111 0%, #000 100%);
+}
+
+canvas {
+    display: block;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+@media screen and (max-width: 768px) {
+    canvas {
+        max-width: 100vw;
+        max-height: 100vh;
+    }
+
+    * {
+        touch-action: manipulation;
+    }
+}
+
+@supports (-webkit-touch-callout: none) {
+    body {
+        -webkit-overflow-scrolling: touch;
+        -webkit-user-select: none;
+        -webkit-tap-highlight-color: transparent;
+    }
+}
