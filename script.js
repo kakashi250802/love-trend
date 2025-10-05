@@ -2394,7 +2394,7 @@ const farStars = createStarLayer({
   count: 6000,
   radius: 250,
   colors: [new THREE.Color(0xaadcff), new THREE.Color(0xffffff)],
-  minSize: 0.5,
+  minSize: 0.8,
   maxSize: 1.5,
   opacity: 0.8,
 });
