@@ -21,7 +21,7 @@ const WORD_SPAWN_INTERVAL = 0.4;
 const IMAGE_CONFIG = {
   paths: appData.images || [],
   count: appData.images?.length || 0,
-  scale: 2.5,
+  scale: 4.5,
   glowIntensity: 0.4,
   spawnRate: 0.18,
   maxActiveImages: 45,
