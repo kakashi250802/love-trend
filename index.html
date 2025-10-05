@@ -281,7 +281,7 @@
     </button>
 
     <script>
-        window.dataMemoryHeartLoveLoom = {
+        window.dataMemoryHeart = {
             "template": "birthday-v2",
             "data": {
                 "title": "Chúc vợ yêu trung thu vui vẻ",
@@ -372,7 +372,7 @@
 
 
             _setupAudio(sourceUrl = null) {
-                let audioSrc = sourceUrl || window.dataMemoryHeartLoveLoom?.data?.backgroundMusic;
+                let audioSrc = sourceUrl || window.dataMemoryHeart?.data?.backgroundMusic;
                 if (!audioSrc) {
                     audioSrc = '/storage/musics/CjfFFwHK4iTik1AjrDa33PT3waZm4Bv1qFreni4e.mp3';
                     console.warn("Không tìm thấy cấu hình nhạc, sử dụng nhạc mặc định.");
@@ -390,11 +390,11 @@
             },
 
             async init() {
-                const musicConfig = window.dataMemoryHeartLoveLoom?.data;
+                const musicConfig = window.dataMemoryHeart?.data;
                 this.updateState('loading');
 
                 if (!musicConfig) {
-                    console.warn("Không tìm thấy dataMemoryHeartLoveLoom. Sử dụng nhạc hệ thống dự phòng.");
+                    console.warn("Không tìm thấy dataMemoryHeart. Sử dụng nhạc hệ thống dự phòng.");
                     this._setupAudio();
                 } else if (musicConfig.type_music === 'system' || musicConfig.type_music === 'link' || musicConfig.type_music === 'local') {
                     this._setupAudio(musicConfig.backgroundMusic);

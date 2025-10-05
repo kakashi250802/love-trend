@@ -5,7 +5,7 @@ import { RenderPass } from "https://cdn.jsdelivr.net/npm/three@0.157.0/examples/
 import { AfterimagePass } from "https://cdn.jsdelivr.net/npm/three@0.157.0/examples/jsm/postprocessing/AfterimagePass.js";
 import { makeMat } from "./materials.min.js";
 
-const appData = window.dataMemoryHeartLoveLoom?.data || {};
+const appData = window.dataMemoryHeart?.data || {};
 
 let allWordsFlat = [];
 const originalTexts = appData.messages || [];
