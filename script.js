@@ -186,7 +186,7 @@ function releaseImageToPool(t) {
   if (void 0 !== e) {
     const a = imagePool[e];
     (a.visible = !1),
-      (a.material.opacity = 0),
+      (a.material.opacity = 0.5),
       (a.userData.isActive = !1),
       (a.userData.particleIndex = -1),
       activeImages.delete(t),
@@ -1967,7 +1967,7 @@ function mainAnimationLoop() {
     if (lifeTime < FADE_DURATION) {
       sprite.material.opacity = lifeTime / FADE_DURATION;
     } else if (particleProgress > 0.7) {
-      sprite.material.opacity = Math.max(0, 1 - (particleProgress - 0.7) / 0.3);
+      sprite.material.opacity = Math.max(0.5, 1 - (particleProgress - 0.7) / 0.3);
     } else {
       sprite.material.opacity = 1;
     }
